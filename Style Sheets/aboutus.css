@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+html {
+    font-size: 62.5%;
+}
+
+  
+body {
+    box-sizing: border-box;
+    font-family: 'Asap', sans-serif;
+    display: block;
+    background-color:rgba(13, 17, 23, 1); 
+}
+
+/* HEADER */
+
+header {
+    background-color: #000;
+    max-width: 140rem;
+    height: 7rem;
+    margin: 0 auto;
+}
+
+
+/* ABOUTUS MAIN CONTENT */
+
+.aboutus-main-container {
+    margin: 5rem auto 5rem auto;
+    width: 100%;
+    max-width: 140rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 1%;
+}
+
+.aboutus-child-container {
+    color: white;
+    margin: 1rem;
+    background-color: rgba(13, 17, 23, 1);
+    display: flex;
+    flex-direction: row;
+    max-width:48%;
+    position: relative;
+    align-items: center;
+}
+
+.aboutus-img-name-container  {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 2% 0 0 7%;
+    max-width:30%;
+    margin: 0.1rem;   
+}
+
+.aboutus-name-container  {
+    font-size: 1.8rem;
+    margin: 10% 0 4% 0%;    
+}
+
+.aboutus-img-container img{
+    max-width: 15rem;
+    height: 19rem;
+    max-height: 19rem;
+    border-radius: 1rem;
+    border: 0.2rem solid aquamarine;
+}
+
+.aboutus-info-container{
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 3.3rem;
+    max-width: 70%;
+    margin: 1%  6% 4% 6%; 
+}
+
+
+
+
+
+/* FOOTER */
+
+footer {
+    background-color: #000;
+    max-width: 140rem;
+    height: 17.3rem;
+    margin: 0 auto;
+}
+          
