@@ -105,3 +105,37 @@ body {
 
 - Grey
   - #302E2E
+
+
+  ### Cards
+  - Legendary
+    - Master-Yi https://www.leagueoflegends.com/en-us/champions/master-yi/
+    - Azir https://www.leagueoflegends.com/en-us/champions/azir/
+    - Trynda https://www.leagueoflegends.com/en-us/champions/tryndamere/
+
+  - Epic
+   - Ori https://www.leagueoflegends.com/en-us/champions/orianna/
+   - Shyvana https://www.leagueoflegends.com/en-us/champions/shyvana/
+   - Ryze https://www.leagueoflegends.com/en-us/champions/ryze/
+   - Ezreal https://www.leagueoflegends.com/en-us/champions/ezreal/
+   - Shen https://www.leagueoflegends.com/en-us/champions/shen/
+   - Zyra https://www.leagueoflegends.com/en-us/champions/zyra/
+   - Diana https://www.leagueoflegends.com/en-us/champions/diana/
+
+  - Rare
+    - Darius https://www.leagueoflegends.com/en-us/champions/darius/
+    - Annie https://www.leagueoflegends.com/en-us/champions/annie/
+    - VI https://www.leagueoflegends.com/en-us/champions/vi/
+    - Vlad https://www.leagueoflegends.com/en-us/champions/vladimir/
+    - Yasuo https://www.leagueoflegends.com/en-us/champions/yasuo/
+    - Zed https://www.leagueoflegends.com/en-us/champions/zed/
+    - Fortune https://www.leagueoflegends.com/en-us/champions/miss-fortune/
+    - Nocturne https://www.leagueoflegends.com/en-us/champions/nocturne/
+    - Sion https://www.leagueoflegends.com/en-us/champions/sion/
+    - Shaco https://www.leagueoflegends.com/en-us/champions/shaco/
+
+  ### Prices
+    - Legendary : 400
+    - Epic : 200
+    - Rare: 100
+    - Game 700
