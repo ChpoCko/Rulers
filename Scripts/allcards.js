@@ -56,3 +56,31 @@ function cardRotate(el) {
 
 // const cardProductBox = document.querySelector('[data-card-product-box]');
 // cardProductBox.setAttribute('rarity', 'legendary');
+
+
+
+// ************************************* RENDER CARDS *************************************
+const cardTemplate = document.querySelector(`[data-card-template]`);
+const cardContainer = document.querySelector(`.catalog-container`);
+fetch('http://localhost:3001/allcards').then(res => res.json())
+.then(data => {
+  data.forEach( champ => {
+    const card = cardTemplate.content.cloneNode(true).children[0];
+    const cardProduct = card.querySelector(`[data-card-product-box]`);
+    const cardPrice = card.querySelector(`[data-card-price]`);
+    const cardImgFront = card.querySelector(`[data-card-img-front]`);
+    const cardImgBack = card.querySelector(`[data-card-img-back]`);
+    const cardInfoLink = card.querySelector(`[data-card-champ-link`);
+
+    cardProduct.setAttribute('data-card-id', champ.id);
+    cardProduct.setAttribute('data-card-rarity', champ.rarity);
+    cardPrice.textContent = champ.price;
+    cardImgFront.src = champ.img_front;
+    cardImgBack.src = champ.img_back;
+    cardInfoLink.href = champ.info_link;
+    cardContainer.append(card);
+  
+  })
+})
+
+// ************************************* FILTER FUNCTIONS *************************************

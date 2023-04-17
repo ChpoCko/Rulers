@@ -9,7 +9,7 @@ app.use(cors());
 
 
 
-app.get('/', (req, res) => {
+app.get('/allcards', (req, res) => {
   const pool = openDb();
 
 
