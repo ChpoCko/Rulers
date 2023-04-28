@@ -346,9 +346,3 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
-@media screen and (max-device-width: 480px) {
-  body {
-    -webkit-text-size-adjust: 100%;
-  }
-}

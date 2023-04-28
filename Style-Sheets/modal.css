@@ -353,11 +353,3 @@
   border-bottom: 2px solid #66fcf1;
   transition: all 0.3s;
 }
-
-/* MEDIA QUERY */
-
-@media screen and (max-device-width: 480px) {
-  body {
-    -webkit-text-size-adjust: 100%;
-  }
-}
