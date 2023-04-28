@@ -469,3 +469,9 @@ a:visited {
     padding: 0 2.8rem;
   }
 }
+
+@media screen and (max-device-width: 480px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+}
