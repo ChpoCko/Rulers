@@ -11,7 +11,7 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: 'Asap', sans-serif;
+  font-family: "Asap", sans-serif;
   background-color: #0d1117;
   color: #ddd;
 }
@@ -468,7 +468,7 @@ body {
 .main--card-ad-imagebox {
   height: 100%;
   overflow: hidden;
-  background-image: url('../Images/Background-visuals/Master-yi-background.webp');
+  background-image: url("../Images/Background-visuals/Master-yi-background.webp");
   background-position: center;
   background-repeat: no-repeat;
   /* background-size: auto 100%; */
@@ -537,7 +537,7 @@ body {
   max-width: 140rem;
   height: 72rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('/Images/Background-visuals/Gold-game-background.webp');
+    url("/Images/Background-visuals/Gold-game-background.webp");
   border-radius: 20px;
   background-size: cover;
   background-position: center;
@@ -545,7 +545,7 @@ body {
 }
 
 .main-game-cta-img {
-  background-image: url('/Images/Background-visuals/Gold-game-background.webp');
+  background-image: url("/Images/Background-visuals/Gold-game-background.webp");
   border-radius: 20px;
   background-size: cover;
   background-position: center;
@@ -579,7 +579,7 @@ body {
   padding: 2.4rem 4.8rem;
   background-color: rgba(207, 149, 3, 0.75);
   border: 3px solid #000;
-  font-family: 'Wallpoet', cursive;
+  font-family: "Wallpoet", cursive;
   /* box-shadow: 0 0rem 2.8rem rgba(0, 0, 0, 0.99); */
   max-width: 48rem;
   color: #fff;
@@ -765,6 +765,7 @@ body {
 @media only screen and (max-width: 25em) {
   html {
     font-size: 43.75%;
+    -webkit-text-size-adjust: none;
   }
 
   .card-p2 {

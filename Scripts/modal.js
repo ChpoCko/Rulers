@@ -167,6 +167,7 @@ signupform.addEventListener('submit', async event => {
 
   //Alert if username or password is empty
   if (!username || !password) {
+
     redAlert('Please enter both an username and a password.');
 
     return;
@@ -192,18 +193,10 @@ signupform.addEventListener('submit', async event => {
     if (response.ok) {
       blueAlert('Signup successful! Welcome to Rulers.');
 
-      console.log(result);
-
       //close modal and empty
       const modal = document.querySelector('.signup-modal-content');
       closeModalLogSign(modal);
       clearSignUp();
-
-      // represent users data
-      server.renderUserGems(userGems);
-      server.renderUserState(logSignHeaderBtns, accItems, accGemsAmountEl);
-
-      console.log('hello');
 
       //If the user already exists
     } else if (
@@ -234,6 +227,7 @@ logInForm.addEventListener('submit', async event => {
   const username = formData.get('username');
   const password = formData.get('password');
 
+  console.log(username, password);
   //Alert if username or password is empty
   if (!username || !password) {
     redAlert('Please enter both a username and password.');

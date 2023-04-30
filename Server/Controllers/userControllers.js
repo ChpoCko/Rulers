@@ -3,14 +3,6 @@ const bcrypt = require('bcrypt');
 const { createToken } = require('../utils/jwtHelpers');
 const jwt = require('jsonwebtoken');
 
-const cookieOptions = {
-  httpOnly: true,
-  // comment out this line below to test on postman
-  sameSite: 'None',
-  secure: true,
-  expires: new Date(Number(new Date()) + 15 * 24 * 60 * 60 * 1000),
-};
-
 //This creates a new user
 exports.signUp = async (req, res) => {
   const pool = server.openDb();
@@ -22,12 +14,7 @@ exports.signUp = async (req, res) => {
       'INSERT INTO users (username, password) VALUES ($1, $2) RETURNING *',
       [req.body.username.toLowerCase(), hashedPassword]
     );
-
-    let token = createToken(await newUser.rows[0]);
-
-    res.cookie('access_token', token.access_token, cookieOptions);
-
-    res.status(200).json({ users: newUser.rows[0], token });
+    res.json({ users: newUser.rows[0] });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -56,8 +43,14 @@ exports.login = async (req, res) => {
 
     let token = createToken(users.rows[0]);
 
-    res.cookie('access_token', token.access_token, cookieOptions);
-    res.status(200).json(token);
+    res.cookie('access_token', token.access_token, {
+      httpOnly: true,
+      // comment out this line below to test on postman
+      sameSite: 'None',
+      secure: true,
+      expires: new Date(Number(new Date()) + 15 * 24 * 60 * 60 * 1000),
+    });
+    res.json(token);
   } catch (error) {
     res.status(401).json({ error: error.message });
   }
@@ -118,34 +111,32 @@ exports.checkAuth = async (req, res) => {
   }
 };
 
+
 // this is to change password
 
 exports.changePassword = async (req, res) => {
   const pool = server.openDb();
   try {
     const { currentPassword, newPassword, confirmPassword } = req.body;
-
+  
     const user = await pool.query('SELECT * FROM users WHERE id = $1', [
       req.user.id,
     ]);
-    const validPassword = await bcrypt.compare(
-      currentPassword,
-      user.rows[0].password
-    );
+    const validPassword = await bcrypt.compare(currentPassword, user.rows[0].password);
 
     if (!validPassword) {
       return res
         .status(400)
         .json({ message: 'Your current password is incorrect' });
     } else {
-      if (newPassword !== confirmPassword) {
+      if (newPassword !== confirmPassword ) {
         return res
           .status(400)
           .json({ message: 'Your new passwords does not match' });
-      } else if (newPassword.length < 4) {
-        return res.status(400).json({
-          message: 'The new password must be at least 4 characters long.',
-        });
+      } else if(newPassword.length < 4) {
+        return res
+        .status(400)
+        .json({ message: 'The new password must be at least 4 characters long.' });
       } else {
         const hashedPassword = await bcrypt.hash(newPassword, 10);
         const updatePassword = await pool.query(

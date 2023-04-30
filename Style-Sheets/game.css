@@ -89,8 +89,9 @@ body {
 }
 
 .game--card.card-1 {
-  transform: translate(8rem, 0rem) rotate(-10deg);
+  transform: translate(8rem, -1rem) rotate(-10deg);
   transition: all ease-in-out 0.8s;
+  /* box-shadow: -5px 0px 3px rgba(0, 0, 0, 0.741); */
 }
 
 .game--card.card-1-move {
@@ -98,7 +99,8 @@ body {
 }
 
 .game--card.card-2 {
-  transform: translate(0rem, 0rem) rotate(0deg);
+  transform: translate(-2rem, -1rem) rotate(0deg);
+  /* box-shadow: -15px 0px 3px rgba(0, 0, 0, 0.741); */
   transition: all ease-in-out 0.8s;
 }
 
@@ -107,7 +109,8 @@ body {
 }
 
 .game--card.card-3 {
-  transform: translate(-7rem, 0rem) rotate(10deg);
+  transform: translate(-12rem, 0rem) rotate(10deg);
+  /* box-shadow: -15px 0px 3px rgba(0, 0, 0, 0.741); */
   transition: all ease-in-out 0.8s;
 }
 
@@ -153,10 +156,6 @@ body {
   margin-bottom: 6.4rem;
 }
 
-.play-price {
-  white-space: nowrap;
-}
-
 .game--btn:hover {
   box-shadow: 0 0 10px 0 rgba(102, 252, 241, 1);
   border: 1px solid rgba(102, 252, 241, 1);
@@ -168,92 +167,100 @@ body {
   height: 3.6rem;
 }
 
-@media only screen and (max-width: 69.4em) {
+/* MEDIA QUERIES */
+
+/* |||||||||||  1000PX  ||||||||||||||| */
+
+@media (max-width: 62.5em) {
   html {
-    font-size: 56.25%;
-  }
-}
-
-@media only screen and (max-width: 57.5em) {
-  .game--card.card-1-move {
-    transform: translate(-3rem, -15vh) rotate(0deg);
+    font-size: 42.25%;
   }
 
+  .game--title {
+    margin-top: 5rem;
+  }
   .game--card.card-3-move {
-    transform: translate(3rem, -15vh) rotate(0deg);
-  }
-
-  .game--card {
-    width: 20rem;
-    height: 28.9rem;
-  }
-
-  .game--card img {
-    width: 20rem;
-    height: auto;
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  html {
-    font-size: 50%;
-  }
-
-  .game--card.card-1-move {
-    transform: translate(-1rem, -15vh) rotate(0deg);
+    transform: translate(5rem, -12vh) rotate(0deg);
   }
 
   .game--card.card-2-move {
-    transform: translate(0rem, 0vh) rotate(0deg);
+    transform: translate(0rem, -12vh) rotate(0deg);
+  }
+  .game--card.card-1-move {
+    transform: translate(-5rem, -12vh) rotate(0deg);
+  }
+}
+
+/* |||||||||||  700PX  ||||||||||||||| */
+
+@media (max-width: 43.75em) {
+  html {
+    font-size: 32.25%;
   }
 
+  .game--title {
+    font-size: 8rem;
+    margin-top: 8rem;
+  }
   .game--card.card-3-move {
-    transform: translate(1rem, -15vh) rotate(0deg);
+    transform: translate(3rem, -10vh) rotate(0deg);
   }
 
-  .game--card {
-    width: 15rem;
-    height: 21.25rem;
+  .game--card.card-2-move {
+    transform: translate(0rem, -10vh) rotate(0deg);
+  }
+  .game--card.card-1-move {
+    transform: translate(-3rem, -10vh) rotate(0deg);
   }
 
-  .game--card img {
-    width: 15rem;
-    height: auto;
+  .game--cards-container {
+    margin-top: 10rem;
   }
 
   .game--text-container p {
-    text-align: center;
+    font-size: 3rem;
+    margin-top: 10rem;
+  }
+
+  .game--btn {
+    font-size: 6rem;
+    margin-top: 2rem;
   }
 }
 
-@media only screen and (max-width: 25em) {
+/* |||||||||||  500PX  ||||||||||||||| */
+
+@media (max-width: 31.25em) {
   html {
-    font-size: 43.75%;
+    font-size: 27.25%;
   }
 
-  .game--card.card-1-move {
-    transform: translate(4rem, -15vh) rotate(0deg);
+  .game--title {
+    font-size: 8rem;
+    margin-top: 8rem;
+  }
+  .game--card.card-3-move {
+    transform: translate(2rem, -8vh) rotate(0deg);
   }
 
   .game--card.card-2-move {
-    transform: translate(0rem, 8vh) rotate(0deg);
+    transform: translate(0rem, -8vh) rotate(0deg);
+  }
+  .game--card.card-1-move {
+    transform: translate(-2rem, -8vh) rotate(0deg);
   }
 
-  .game--card.card-3-move {
-    transform: translate(-4rem, -15vh) rotate(0deg);
+  .game--cards-container {
+    margin-top: 10rem;
   }
 
-  .game--card {
-    width: 12rem;
-    height: 17rem;
+  .game--text-container p {
+    font-size: 3rem;
+    margin-top: 10rem;
   }
 
-  .game--card img {
-    width: 12rem;
-    height: auto;
-  }
-
-  .game--container {
-    row-gap: 12rem;
+  .game--btn {
+    font-size: 7rem;
+    margin-top: 3rem;
   }
 }
