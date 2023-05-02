@@ -1,6 +1,5 @@
 class server {
-  // BACKEND_URL = "https://rulers-sh.com";
-  BACKEND_URL = 'http://127.0.0.1:3001';
+  BACKEND_URL = 'https://rulers-sh.com';
 
   checkAuth = async () => {
     return new Promise((resolve, reject) => {

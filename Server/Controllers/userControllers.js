@@ -5,7 +5,6 @@ const jwt = require('jsonwebtoken');
 
 const cookieOptions = {
   httpOnly: true,
-  // comment out this line below to test on postman
   sameSite: 'None',
   secure: true,
   expires: new Date(Number(new Date()) + 15 * 24 * 60 * 60 * 1000),
