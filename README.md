@@ -1,4 +1,4 @@
-<h1> <a href="https://rulers-sh.com/index.html">Rulers</a> </h1>
+<h1> <a href="https://rulers.salute-sir.com/">Rulers</a> </h1>
 <h3> This project is made for OAMK web development project course, as final project of first year. </h3>
 <br>
 <h3> Contributors </h3>
@@ -12,7 +12,7 @@
  </p>
  <br>
  <h3> Description </h3>
- <p>Main aim of the project was to make a small scale web-application that users can sign up, interact, and store data. Considering the aim we build <a href="https://rulers-sh.com/index.html">Rulers</a> which users can log-in, purchase cards, play a card game and store their cards in their own collection.</p>
+ <p>Main aim of the project was to make a small scale web-application that users can sign up, interact, and store data. Considering the aim we build <a href="https://rulers.salute-sir.com/">Rulers</a> which users can log-in, purchase cards, play a card game and store their cards in their own collection.</p>
  <br>
  <h3> The process </h3>
   <p>The total project duration was 7 week. Each contributor worked 5-8 hours per day. We started with creating a user-centered backlog and proceeded with defining requirements based on the backlog. We followed Scrum as a project development system and used Hacknplan as the project development tool. Each week one of us took the lead and acted as Scrum master. We started the sprints by defining the tasks every Monday and ended the sprint on Sunday with a sprint review. We had a meeting every weekday, meeting durations were flexible. Please consider our <a href="https://app.hacknplan.com/p/183399/kanban?categoryId=0&boardId=506202">hacknplan</a> to see the project development process in detail.</p>
